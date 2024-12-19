@@ -1,9 +1,22 @@
+import javax.swing.*;
+import java.awt.*;
 import java.util.Scanner;
+import FORMULARIO.FORM;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Principal registro = new Principal();
 
+        JFrame frame = new JFrame("LOGIN");
+        frame.setContentPane(new FORM().formularios);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 300);
+        frame.setPreferredSize(new Dimension(400, 300));
+        frame.setLocationRelativeTo(null);
+        frame.pack();
+        frame.setVisible(true);
+
+        /*
         while(true) {
             System.out.println(" ---- MENU ----");
             System.out.println("1. Agregar Cliente");
@@ -41,5 +54,8 @@ public class Main {
                     System.out.println("Opcion invalida.");
             }
         }
+
+
+         */
     }
 }
